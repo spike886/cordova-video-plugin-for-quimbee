@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-video-plugin-for-quimbee"
+        version="1.0.0">
+
+    <name>Cordova video plugin for Quimbee</name>
+
+    <description>
+        Allows Quimbee App to play play the audio when the iphone is set on silent
+    </description>
+
+    <license>MIT</license>
+
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+
+    <!-- ios -->
+    <platform name="ios">
+
+        <config-file target="config.xml" parent="/*">
+            <feature name="CordovaVideo">
+                <param name="ios-package" value="CordovaVideo"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <header-file src="src/ios/CordovaVideo.h"/>
+        <source-file src="src/ios/CordovaVideo.m"/>
+    </platform>
+
+</plugin>
